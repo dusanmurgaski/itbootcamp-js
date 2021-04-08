@@ -1,0 +1,19 @@
+p 
+{
+    background-color: rgb(170, 107, 107);
+}
+
+body 
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    text-align: center;
+                background-color: salmon;   
+}
+.podebljano 
+{
+    font-size: x-large;
+}
+#iskosena
+{
+    font-style: italic;
+}

@@ -1,0 +1,56 @@
+h1
+{
+    color:darkred;
+}
+h2
+{
+    color:red;
+}
+.paragrafi 
+{
+    color:purple;
+}
+#slika
+{
+    width: 400px;
+    height: 300px;
+    border:black dashed 2px;
+    
+
+}
+#linkic
+{
+    color:orange;
+   
+}
+body
+{
+    background-color:rgb(218, 172, 23);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+.druginaslov
+{
+    text-align: center;
+
+
+}
+.paragrafi1i2
+{
+    text-align: right;
+    font-size: 24px;
+}
+.trecinaslov
+{
+    text-align: center;
+    color:green;
+    font-family: Comic sans-serif;
+}
+a:hover 
+{
+    color: yellow;
+}
+a:visited 
+{
+    color: green;
+}
