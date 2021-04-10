@@ -1,0 +1,18 @@
+table td, th {
+     border: grey 1px solid;
+     height: 30px;
+     width: 100px;
+     padding: 8px;
+     
+}
+table {
+     border-collapse: collapse;
+     text-align: left;
+}
+.obojenRed{
+     background-color: yellow;
+}
+.drugaTabela tr td:nth-child(3), .drugaTabela tr th:nth-child(3){
+     background-color: yellow;
+}
+

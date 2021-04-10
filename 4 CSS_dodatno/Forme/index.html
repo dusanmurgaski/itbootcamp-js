@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma</title>
+</head>
+
+<body>
+    <form action="https://www.google.com/">
+        <fieldset>
+            <legend>Osnovi podaci</legend>
+            <p><label> Ime i prezime</label>
+                <input type="text">
+            </p>
+
+            <p> <label> Korisnicko ime</label>
+                <input type="text" maxlength="20">
+            </p>
+
+            <p>
+                <label>Lozinka</label>
+                <input type="password">
+
+            </p>
+
+            <p>
+                <label> Godine</label>
+                <input type="number" min="18" max="20" step="0.3">
+            </p>
+            <p>
+                <label> Datum rodjenja</label>
+                <input type="date">
+            </p>
+            <p><label> Vreme roenja</label>
+                <input type="time">
+            </p>
+            <p>
+                <label> Drzava rodjenja:</label>
+                <input type="text" value="Srbija">
+            </p>
+
+            <p>
+                <label>Drzava stanovanja: </label>
+                <input type="text" value="Srbija" disabled>
+            </p>
+            <p>
+                <label> Drzavljanstvo:</label>
+                <input type="text" placeholder="Unesite drzavljanstvo">
+            </p>
+            <p>
+                <label> Pol:</label>
+                <input type="radio" name="Pol" value="n" checked> Neopredeljen
+                <input type="radio" name="Pol" value="z">Zenski
+                <input type="radio" name="Pol" value="m"> Muski
+
+                <label> </label>
+            </p>
+
+
+
+
+        </fieldset>
+        <fieldset>
+            <legend>Dodatne informacija</legend>
+            <legend>Da li zelite da primate poruke od nas?</legend>
+            <input type="radio" name="poruke" value="da" checked> da
+            <input type="radio" name="poruke" value="ne"> ne
+
+            <p> <label> Odaberite programski jezik:</label>
+                <input type="checkbox" name="jezik" value="JS"> JS
+                <input type="checkbox" name="jezik" value="Py"> Python
+                <input type="checkbox" name="jezik" value="PHP"> PHP
+            </p>
+            <p>
+                <label> CV:</label>
+                <input type="file">
+            </p>
+            <p>
+                <label> odaberite kurs:</label>
+                <select>
+                    <optgroup label="Nis">
+                        <option value="php"> php</option>
+                        <option value="js">js</option>
+                        <option value="ptyh"> pyth</option>
+                    </optgroup>
+                    <optgroup label="Kragujevac">
+                        <option value="dsd">dsds
+
+                        </option>
+                        <option value="dsds">dsdsd</option>
+                    </optgroup>
+
+                </select>
+
+            </p>
+            <p>
+                <label> zasto ste se opredelili?</label>
+                <textarea name="" id="" cols="30" rows="10" value="mrs"></textarea>
+            </p>
+
+        </fieldset>
+
+        <input type="reset" value="resetuj">
+        <input type="submit" value="posalji">
+        <button> proveri </button>
+
+
+
+    </form>
+</body>
+
+</html>

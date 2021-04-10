@@ -1,0 +1,45 @@
+.crveniParagraf {
+    color:red;
+}
+.desnoPoravnanje {
+    text-align: right;
+}
+/* Vise elemenata ili klasa sa istim osobinama */
+h3, h4, .drugi, #treci{
+    color:orange;
+    text-align: center;
+}
+
+
+.drugi, #treci {
+    background-color: brown;
+}
+li {
+    color:green;
+}
+.kurs {
+    color:blue;
+}
+#java {
+    color:purple;
+}
+li{
+    color:gray;
+
+}
+div p{
+    text-decoration: underline;
+}
+div .podParagraf{
+    color:turquoise;
+}
+ol li:nth-child(3){
+    font-style: italic;
+}
+
+ol li:nth-child(odd){
+    color:tomato;
+}
+ol li:nth-child(even){
+    color:teal;
+}
