@@ -1,0 +1,82 @@
+table.meni tr th{
+    width: 100px; 
+    font-size: 20px;
+}
+
+table a {
+    text-decoration: none;
+}
+table.sastav tr td{
+
+    text-align: center;
+    font-size: 12px;
+    
+}
+div a {
+    text-decoration: none;
+}
+div a:visited {
+    background-color: red;
+}
+table a:visited {
+    color: black;
+}
+table a:hover {
+    background-color: orange;
+}
+
+}
+
+table.sastav img {
+    width: 100px;
+}
+li.grad {
+    color: orange;
+}
+ul {
+    color:black;
+}
+li.qa {
+    color: green;
+}
+span.bold {
+    font-weight: bold;
+}
+span.podvuci {
+    text-decoration: underline;
+}
+
+div {
+   text-align: center;
+   font-weight: bold;
+}
+div img {
+    border: solid orange 5px;
+}
+div span {
+    color: orange;
+}
+
+.link {
+    color: green;
+}
+h1 {
+    font-size: 40px;
+}
+fieldset {
+    width: 400px;
+}
+
+button {
+    background-color: orange;
+    font-size: large;
+    color: wheat;
+    border: none;
+    padding: 15px;
+    
+}
+
+
+
+
+    

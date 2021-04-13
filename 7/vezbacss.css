@@ -1,0 +1,23 @@
+span {
+    border: black solid 1px;
+    padding: 10px 200px 1px 20px;
+    display: inline-block;
+    width: 50%;
+
+}
+#drugi {
+    background-color: gray;
+
+}
+#prvi {
+    background-color: indianred;
+}
+p {
+    border: black 2px solid;
+    margin: 10px;
+    padding: 10px;
+    background-color: blue;
+    width: 350px;
+    height: 100px;
+    overflow: hidden;
+}
