@@ -1,0 +1,23 @@
+.div1 {
+    float:left;
+
+}
+.div2 {
+    float:center;
+}
+.div3 {
+    float:right;
+}
+div {
+    position:relative;
+}
+img {
+    width: 100px;
+}
+section {
+    width: 800px;
+    overflow: hidden;
+}
+section {
+    border: solid 1px black;
+}

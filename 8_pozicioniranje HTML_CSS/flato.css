@@ -1,0 +1,12 @@
+#float {
+    background-color: crimson;
+
+    overflow: hidden;
+}
+p {
+    background-color: darkgreen;
+    float: left;
+    width: 300px;
+    margin: 30px;
+
+}

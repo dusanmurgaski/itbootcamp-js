@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+header {
+    position: relative;
+    background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/19/43/a8/20/double-san-marzzano-pizza.jpg");
+    padding: 50px;
+
+}
+div {
+    position:absolute;
+   top:40%;
+   right:40%;
+   
+    
+    
+}
