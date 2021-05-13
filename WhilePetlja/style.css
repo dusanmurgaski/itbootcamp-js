@@ -1,0 +1,12 @@
+img {
+    display:block;
+    width: 164px;
+    margin: 20px;
+}
+
+.okvir1 {
+    border:solid red 2px;
+}
+.okvir2 {
+    border:green solid 2px;
+}
