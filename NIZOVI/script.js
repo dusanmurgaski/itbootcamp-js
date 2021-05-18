@@ -183,3 +183,142 @@ for (let i = 0; i < celobrojniNiz.length; i++) {
     }
 }
 console.log(brojParnih);
+
+
+// 12. Odrediti broj parnih elemenata sa neparnim indeksom
+
+let noviNizBrojeva = [10, 16, 15, 17, 12, -14];
+let brElem = 0;
+for (let i = 0; i < noviNizBrojeva.length; i++) {
+    if (noviNizBrojeva[i] % 2 == 0 && i % 2 != 0){
+        brElem ++;
+    }
+}
+console.log(brElem);
+
+// 13. Izracunati sumu elemenata niza sa parnim indeksom
+
+let sumaElemenata = 0;
+for (let i = 0; i < noviNizBrojeva.length; i++){
+    if ( i % 2 == 0){
+        sumaElemenata += noviNizBrojeva[i];
+    }
+}
+console.log(sumaElemenata);
+
+// 14. Promeniti znak svakom elementu celobrojnog niza 
+
+for ( let i = 0; i < noviNizBrojeva.length; i++){
+    noviNizBrojeva[i] = -noviNizBrojeva[i]
+}
+console.log(noviNizBrojeva);
+
+// 15. Promeniti znak svakom neparnom elementu celobrojnog niza
+// sa parnim indeksom
+
+for ( let i = 0; i < noviNizBrojeva.length; i++){
+    if(noviNizBrojeva[i] % 2 != 0 && i % 2 ==0){
+        noviNizBrojeva[i] = -noviNizBrojeva[i]
+    }
+}
+console.log(noviNizBrojeva);
+// 16. Dat je niz stavki za kupovinu (stringovi)
+// Prolaskom kroz niz napraviti neuredjenu listu i ispisati je u 
+// html dokument
+
+let stavke = [`brasno`, `secer`, `mast`, `meso`, `hleb`];
+console.log(stavke);
+let nLista = `<ul>`;
+let nListaZ = `</ul>`;
+let lista = "";
+
+for (let i = 0; i <stavke.length; i++){
+    lista += `<li> ${stavke[i]} </li>`
+}
+
+document.body.innerHTML += nLista + lista + nListaZ;
+
+// Nacin sa casa
+
+
+
+// 17. Dat je niz imena kosarkaskog tima. Prolaskom kroz niz formiratu
+// tabelu u cijim redovima imena tima , i tabelu ispisati u html;
+
+let imena = ["Rale", "Marko", "Dusan", "Rastko", "Dimitrije"];
+let tabela = `<table>`;
+
+
+for (let i = 0; i < imena.length; i++){
+    tabela += `<tr><td> ${imena[i]}</td></tr>`;
+}
+
+document.body.innerHTML += tabela + "</table>";
+
+// 18. Dat je niz stringova ciji su clanovi putanje do slike.
+// Prikazati sve slike u htmlu sa putanjama u navedenom nizu
+
+let slike = ["1.png", `2.png`, `3.png`];
+
+for (let i = 0; i < slike.length; i++){
+    document.body.innerHTML += `<img src="${slike[i]}">`
+}
+
+// 19. ispisati duzinu svakog elemenat u nizu stringova
+// let imena = ["Rale", "Marko", "Dusan", "Rastko", "Dimitrije"];
+
+for (i=0; i < imena.length; i++){
+    console.log(`Element ${imena[i]} ima ${imena[i].length} karaktera`);
+}
+
+// 20. Odrediti element u nizu stringova sa najvecom duzinom
+// let imena = ["Rale", "Marko", "Dusan", "Rastko", "Dimitrije"];
+imena = ["Rale", "Marko", "Dusanadsds", "Rda", "Ditrije"];
+
+maks = imena[0];
+// let ime = imena[0];
+
+for (let i = 0; i < imena.length; i++){
+    if( maks.length < imena[i].length){
+        maks = imena[i];
+       // ime = imena[i];
+    }
+}
+console.log(maks);
+// console.log(ime);
+
+
+// 21. Odrediti broj elemenata u nizu 
+//stringova cija je duzina veca od prosecne
+// duzine svih stringova u nizu
+
+imena = ["Rale", "Marko", "Dusanadsds", "Rda", "Dimitrije","dkasidaksdsak", "dksdmafsakfas", "ddd", "dfff"];
+let brojArsr = 0;
+let brojac = 0;
+for ( let i = 0; i<imena.length; i++){
+    brojArsr += imena[i].length
+    brojac ++;
+}
+arsr = brojArsr / brojac;
+    let brojArsrElemenata = 0;
+for (let i = 0; i < imena.length; i++){
+    if (imena[i].length > arsr){
+        brojArsrElemenata ++;
+    }
+}
+console.log(brojArsrElemenata);
+
+
+// 22. Odrediti broj elemenata u nizu stringova koji sadrze slovo a
+
+let slovoAStringovi = ["d","adsd", "kklkg"];
+
+// Ugradjena funkcija includes  rec.includes("a"); true/false
+let num = 0;    num++;
+for (let i = 0; i < slovoAStringovi.length; i++){
+    let rec = slovoAStringovi[i];
+    if (rec.includes("a")){
+        num++;
+    }
+}
+console.log(num);
