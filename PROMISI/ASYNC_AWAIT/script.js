@@ -25,7 +25,12 @@ let getTodos = async () => {
   let response = await fetch("../JSON/fruits.json"); // Vraca response zbog cega smo ranije koristili then i catch
   // AWAIT - cekaj dokle god se ne izvrsi komada koja je iza AWAIT
   //console.log(response);
-  let data = await response.json();
+  if (response.status != 200) {
+    throw new Error("ne mogu da doh podatke");
+  } else {
+    let data = await response.json();
+  }
+
   response = await fetch("../JSON/vegetables.json");
   data = await response.json();
   return data; // vracam promise, sto znaci da cu za njega morati da radim .then i . catch
@@ -36,7 +41,7 @@ console.log(2);
 
 getTodos()
   .then((data) => console.log("resolved", data))
-  .catch((err) => console.log("rejected" err));
+  .catch((err) => console.log("rejected", err));
 
 console.log(3);
 console.log(4);
