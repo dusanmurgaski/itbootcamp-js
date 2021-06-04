@@ -1,0 +1,1 @@
+fetch("../JSON/fruits.json");

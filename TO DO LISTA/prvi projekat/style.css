@@ -1,0 +1,15 @@
+li {
+    border: blue 1px solid;
+    width: 180px;
+    height: 30px;
+    list-style-type: none;
+    background-color: rgb(113, 113, 221);
+    margin: 10px;
+    padding: 10px;
+    margin-left: 0%;
+}
+h1 {
+    position: relative;
+    left: 40px;
+    color:rgb(0, 217, 255)
+}

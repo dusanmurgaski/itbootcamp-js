@@ -114,35 +114,146 @@ sviDivoviSaKlasomError.forEach(elem => {
     elem.innerHTML += `<h1> GRESKA!!!</h1>`;
 });
 
+// neka je n broj paragrafa u dodatum dokumentu. u svakoom i-tom dodati broj i2 za svako i=1,2,...n.
+sviParagrafi.forEach((elem, i) => {
+    elem.innerHTML += (i + 1) ** 2;
+})
+
+
+// svim slikama dodati alternativni tekst
 let sveSlike1 = document.querySelectorAll("img");
 
 sveSlike1.forEach(element => {
     element.alt = "ALTERNATIVNI TEXT";
 });
 
-
+// svim p postaviti atribut style tako da budu ljubicasti
 sviParagrafi.forEach(elem => {
     elem.style.color = "purple";
 });
 
 
 // svim parnim P zelena pozadnisnka a neparnim crvena
-// for (let i = 0; i < sviParagrafi.length; i++) {
-//     if (i % 2 != 0) {
-//         sviParagrafi[i].style.backgroundColor = "green";
+for (let i = 0; i < sviParagrafi.length; i++) {
+    if (i % 2 != 0) {
+        sviParagrafi[i].style.backgroundColor = "green";
+    }
+    else {
+        sviParagrafi[i].style.backgroundColor = "red";
+    }
+}
+
+
+// svim linkovima dati  padding fontsize 18 itd...
+for (let i = 0; i < sviLinkovi.length; i++) {
+    sviLinkovi[i].style.padding = "5px";
+    sviLinkovi[i].style.textDecoration = "none";
+    sviLinkovi[i].style.fontSize = "8px";
+    if (i % 2 == 0) {
+        sviLinkovi[i].style.backgroundColor = "green";
+        sviLinkovi[i].style.color = "purple";
+    }
+    else {
+        sviLinkovi[i].style.backgroundColor = "blue";
+        sviLinkovi[i].style.color = "white";
+    }
+}
+
+
+// svim slikama na stranici koji su .png postaviti okvir na debiljinu 2 px i crvenu boju
+// sveSlike1 = document.querySelectorAll("img[src*='.png']");
+// for (let i = 0; i < sveSlike1.length; i++) {
+//     sveSlike1[i].style.border = "solid red 20px";
+// }
+// DRUGI NACIN
+// let slike = document.querySelectorAll("img");
+// slike.forEach(element => {
+//     if (element.src.includes(".png") || element.src.includes(".PNG")) {
+//         element.style.border = "2px solid red";
+//     }
+// });
+// // svim likovima promeniti _blank i _top
+// for (let i = 0; i < sviLinkovi.length; i++) {
+//     if (sviLinkovi[i].target == "_blank") {
+//         sviLinkovi[i].target = "_top";
 //     }
 //     else {
-//         sviParagrafi.[i].style.backgroundColor = "red";
+//         sviLinkovi[i].target = "_blank";
 //     }
 // }
 
-sviParagrafi.forEach((elem, i) => {
-    let i = 0;
-    if (i % 2 != 0) {
-        elem[i].style.backgroundColor = "green";
+
+// Napraviti niz od najmanje tri imena. Poric nizom i ismena ispisati
+// Svako u novom linku. Ako ime pocinje na slovo s link se otvara u novom tabu inace se otvara na istoj stranici
+// u listi kao stavke liste naizmenicno stavke liste obojite sa deve raz boje
+// u jednoj koloni tabele. postaviti okvir marginu i padding celijama tabele
+
+
+
+let niz = ["stefan", "mladen", "jelena", "marko"];
+
+niz.forEach(elem => {
+    if (elem[0] == "s") {
+        document.body.innerHTML += `<a href="#" target="_blank"> ${elem} </a>`
     }
     else {
-        sviParagrafi.[i].style.backgroundColor = "red";
+        document.body.innerHTML += `<a href="#"> ${elem} </a>`
     }
+});
 
-})
+let result = "<ul>";
+niz.forEach((ime, i) => {
+    if (i % 2 == 0) {
+        result += `<li style="color: blue"> ${ime}</li>`;
+    }
+    else {
+        result += `<li style="color: red"> ${ime}</li>`;
+    }
+});
+result += "</ul>";
+
+document.body.innerHTML += result;
+
+
+// dohvatanje roditeljskog cvora 
+linkovi = document.querySelectorAll("a");
+
+linkovi.forEach(link => {
+    console.log(link.parentNode);
+    link.parentNode.style.border = "2px solid red";
+});
+
+// dohvatanje deteta nekog cvora
+let prviDiv1 = document.querySelector("div.container");
+
+console.log(prviDiv.childNodes[0]);
+
+prviDiv.childNodes.forEach(child => {
+    console.log(child);
+});
+let n = prviDiv.childNodes.length;
+for (let i = 0; i < n; i++) {
+    console.log(prviDiv.childNodes[i]);
+}
+let link1 = prviDiv.childNodes[1];
+console.log(link1.previousSibling);
+console.log(link1.nextSibling);
+console.log(link1.nextSibling.nextSibling);
+
+
+
+// menjanje klasa elemenata
+
+
+// svim parnim paragrafima na stranici dodati klasu error a svim neparnim dodati klasu sucess
+
+sviParagrafi = querySelectorAll("p");
+
+for (let i = 0; i < sviParagrafi.length; i++) {
+    if (i % 2 != 0) {
+        sviParagrafi[i].classList.add("success");
+    }
+    else {
+        sviParagrafi[i].classList.add("error");
+    }
+}
