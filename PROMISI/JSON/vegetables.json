@@ -1,10 +1,14 @@
 [
   {
-    "name": "vegetables1",
-    "number": "5"
+    "name": "avokado",
+    "tezina": "5"
   },
   {
-    "name": "vegetables2",
-    "number": "7"
+    "name": "krompir",
+    "tezina": "7"
+  },
+  {
+    "name": "krastavac",
+    "tezina": "3"
   }
 ]

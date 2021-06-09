@@ -1,10 +1,14 @@
 [
   {
-    "name": "fruit1",
-    "number": "5"
+    "name": "cranberries",
+    "tezina": "5"
   },
   {
-    "name": "fruit2",
-    "number": "7"
+    "name": "banana",
+    "tezina": "7"
+  },
+  {
+    "name": "berries",
+    "tezina": "10"
   }
 ]
