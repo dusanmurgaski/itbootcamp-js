@@ -48,9 +48,86 @@ class Film {
   }
 }
 
-let film1 = new Film("Irreversible", "Gaspar Noe", 2002, [1, 3, 2, 6, 8]);
-let film2 = new Film("Piano Teacher", "Michael Haneke", 1999);
-let film3 = new Film("I Stand Alone", "Gaspar Noe", 1998);
+let film1 = new Film("Irreversible", "Gaspar Noe", 2000, [5]);
+let film2 = new Film("Piano Teacher", "Michael Haneke", 1900, [10]);
+let film3 = new Film("I Stand Alone", "Gaspar Noe", 1901, [1]);
 
 let niz = [film1, film2, film3];
 console.log(film1.prosek());
+
+function vekFilmova(niz, vek) {
+  niz.forEach((elem) => {
+    if ((elem.godina / 100) % 1 == 0) {
+      if (elem.godina / 100 == vek) {
+        console.log(elem.naslov);
+      }
+    } else if (Math.floor(elem.godina / 100 + 1) == vek) {
+      console.log(elem.naslov);
+    }
+  });
+}
+vekFilmova(niz, 19);
+
+function prosecnaOcena(niz) {
+  let sumaOcena = 0;
+  let brojac = 0;
+  let prosek = 0;
+  niz.forEach((elem) => {
+    elem.ocena.forEach((el) => {
+      sumaOcena += el;
+      brojac++;
+    });
+  });
+  prosek = sumaOcena / brojac;
+  return prosek;
+}
+
+console.log(prosecnaOcena(niz));
+
+function najboljeOcenjeni(niz) {
+  let najbolji = niz[0];
+  niz.forEach((elem) => {
+    if (elem.prosek() > najbolji.prosek()) {
+      najbolji = elem;
+    }
+  });
+  return najbolji;
+}
+
+console.log(najboljeOcenjeni(niz));
+
+function osrednjiFilm(niz) {
+  niz.forEach((elem) => {
+    if (elem.prosek() - prosecnaOcena(niz) == 1) {
+      console.log(elem.naslov);
+    }
+  });
+}
+
+osrednjiFilm(niz);
+
+function najmanjaOcena(niz) {
+  let nO = niz[0].ocena[0];
+  niz.forEach((elem) => {
+    elem.ocena.forEach((el) => {
+      if (el < nO) {
+        nO = el;
+      }
+    });
+  });
+  return nO;
+}
+
+console.log(najmanjaOcena(niz));
+
+function iznadOcene(niz, ocena) {
+  let nizFilmova = [];
+  niz.forEach((elem) => {
+    if (elem.prosek() > ocena) {
+      nizFilmova.push(elem);
+    }
+  });
+  return nizFilmova;
+}
+
+console.log(iznadOcene(niz, 3));
